@@ -5,35 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shaheen Enterprises</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      text-align: center;
-      padding: 50px;
+    * {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+
+    body {scroll-behavior: smooth;}
+
+    header {
+      position: fixed;
+      top:0; left:0; width:100%;
+      background:#2c3e50;
+      padding:15px 0;
+      text-align:center;
+      z-index:1000;
     }
-    h1 {
-      color: #2c3e50;
+
+    header nav a {
+      color:white;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
     }
-    p {
-      font-size: 18px;
-      color: #555;
+
+    header nav a:hover {color:#f39c12;}
+
+    section {
+      padding:80px 20px;
+      min-height:100vh;
+      text-align:center;
     }
-    .box {
-      background: white;
-      padding: 20px;
-      margin: auto;
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+
+    #home {
+      background:url('https://i.ibb.co/7yYgkTQ/dry-fruits-bg.jpg') no-repeat center center/cover;
+      color:white;
+      display:flex; flex-direction:column;
+      justify-content:center; align-items:center;
+    }
+
+    #home h1 {font-size:3rem; margin-bottom:15px;}
+    #home p {font-size:1.2rem;}
+
+    #about {background:#f9f9f9; color:#333;}
+    #about h2 {margin-bottom:20px;}
+
+    #products {background:#fff;}
+    #products h2 {margin-bottom:20px;}
+
+    .grid {
+      display:flex; flex-wrap:wrap;
+      gap:20px; justify-content:center;
+    }
+
+    .product {
+      background:#f4f4f4;
+      border-radius:10px;
+      padding:10px;
+      width:180px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+    .product:hover {transform:scale(1.05);}
+    .product img {width:100%; border-radius:8px;}
+    .product p {margin-top:10px; font-weight:bold;}
+
+    #contact {background:#f9f9f9;}
+    #contact h2 {margin-bottom:15px;}
+    .contact-info {font-size:18px; margin:8px 0;}
+    .btn {
+      display:inline-block; margin-top:15px;
+      padding:10px 20px; background:#f39c12;
+      color:white; border-radius:5px; text-decoration:none;
+      transition:0.3s;
+    }
+    .btn:hover {background:#e67e22;}
+
+    footer {
+      background:#2c3e50; color:white;
+      text-align:center; padding:15px;
     }
   </style>
 </head>
 <body>
-  <div class="box">
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
     <h1>Shaheen Enterprises</h1>
-    <p>Sehat aur Swaad ka Khazana – Dry Fruits & Spices</p>
-    <p><b>Contact:</b> +91-7006440725</p>
-    <p><b>Address:</b> Gulbugh Ratnipora Pulwama</p>
-  </div>
+    <p>✨ Sehat aur Swaad ka Khazana – Dry Fruits & Spices ✨</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Shaheen Enterprises mein hum Kashmir ke behtareen Dry Fruits aur Spices lekar aate hain. 
+       Humara mission hai aapko sehatmand aur swaadisht products deliver karna jo 100% natural aur pure hote hain.</p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://i.ibb.co/ZL4McqJ/almonds.jpg" alt="Almonds">
+        <p>Almonds</p>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/JxBnZfD/cashews.jpg" alt="Cashews">
+        <p>Cashews</p>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/hVqrz9Y/pista.jpg" alt="Pistachios">
+        <p>Pistachios</p>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/55wS1m0/raisins.jpg" alt="Raisins">
+        <p>Raisins</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p class="contact-info">📞 +91-7006440725</p>
+    <p class="contact-info">📍 Gulbugh Ratnipora Pulwama</p>
+    <p class="contact-info">✉️ shaheenenterprises@mail.com</p>
+    <a href="https://wa.me/917006440725" class="btn">Chat on WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Shaheen Enterprises. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
